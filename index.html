@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>512x512 Image Cropper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cropper-container">
+    <h2>512 x 512 Image Cropper</h2>
+
+    <!-- Image Input -->
+    <input type="file" id="imageInput" accept="image/*">
+
+    <!-- Crop Area Box -->
+    <div class="crop-wrapper" id="cropWrapper">
+      <canvas id="cropCanvas" width="512" height="512"></canvas>
+      <div class="overlay-text" id="overlayText">Upload an image to start</div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <label for="zoomRange">Zoom:</label>
+      <input type="range" id="zoomRange" min="0.1" max="3" step="0.01" value="1" disabled>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="cropBtn" disabled>Crop & Download 512x512</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
